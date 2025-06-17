@@ -1,4 +1,4 @@
-# Cpp_DSA-Learning 📘
+# C++_DSA-Learning 📘
 
 This repository contains my journey as I learn **Data Structures and Algorithms (DSA)** using **C++**.
 
