@@ -1,0 +1,16 @@
+# Ignore build artifacts
+*.exe
+*.out
+*.obj
+*.o
+
+# VS Code files (if you're using it)
+.vscode/
+
+# Backup files
+*.log
+*.tmp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
