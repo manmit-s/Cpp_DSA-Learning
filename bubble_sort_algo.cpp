@@ -8,7 +8,7 @@ void display(vector <int> arr){
     }
 }
 
-void bubbleSort(vector <int>& arr){ //Time Complexity --> O(n*n)
+void bubbleSort(vector <int>& arr){   //Time Complexity --> O(n*n)
     int n = arr.size();
     bool isSwap = false;  // optimization for handling already sorted arrays
 
@@ -19,7 +19,7 @@ void bubbleSort(vector <int>& arr){ //Time Complexity --> O(n*n)
                 isSwap = true;
             }
         }
-        if(!isSwap) return; //array is already sorted
+        if(!isSwap) return;   //array is already sorted
     }
 }
 
