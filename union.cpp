@@ -1,4 +1,4 @@
-//galat hai bc
+//galat hai 
 #include <iostream>
 using namespace std;
 void display(int arr[], int size){
