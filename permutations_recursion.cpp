@@ -2,6 +2,9 @@
 #include <iostream>
 using namespace std;
 
+
+//Time Complexity - O(n!*n)
+//Space Complexity - O(n! + n)
 void getPerms(vector<int>& nums, int idx, vector<vector<int>> &ans){
     if(idx == nums.size()){
         ans.push_back({nums});
