@@ -7,23 +7,7 @@ using namespace std;
 // nums = [2,2,2,2,2,2,2]
 // target = 3
 
-//T2
-// nums = [3,1,1,1,2,2,2]
-// target = 3
-
-//T3
-// nums = [1,1,1,3,1]
-// target = 3
-
-//T4
-// nums = [1,1,3,1]
-// target = 3
-
-//T5
-// nums = [1]
-// target = 0
-
-//T6 (Failed) -> (Passed)
+//T2 (Failed) -> (Passed)
 // nums = [1,0,1,1,1]
 // target = 0
 
@@ -36,7 +20,7 @@ bool search(vector<int>& nums, int target) {
 
         if(nums[mid] == target) return true;
 
-        //Handle Duplicates for T6
+        //Handle Duplicates for T2
         if(nums[s] == nums[mid] && nums[mid] == nums[e]){
             s++, e--;
         }
