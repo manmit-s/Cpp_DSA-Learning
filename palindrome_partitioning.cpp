@@ -1,41 +1,39 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <string>
 using namespace std;
 
-class Solution {
-public:
-    vector<vector<string>> res;
-    vector<string> path;
-    
-    vector<vector<string>> partition(string s) {
-        backtrack(s, 0);
-        return res;
+bool isPalindrome(string s){
+    string t = s;
+    reverse(t.begin(), t.end());
+    return s == t;
+}
+
+void getAllParts(string s, vector<vector<string>>& ans, vector<string>& validPartitions){
+    int n = s.size();
+    if(s == ""){
+        ans.push_back(validPartitions);
+        return;
     }
-    
-    void backtrack(string &s, int start) {
-        if (start == s.size()) {
-            res.push_back(path);
-            return;
-        }
-        
-        for (int end = start; end < s.size(); end++) {
-            if (isPalindrome(s, start, end)) {
-                path.push_back(s.substr(start, end - start + 1));
-                backtrack(s, end + 1);
-                path.pop_back();
-            }
+
+    for(int i = 0; i < n; i++){
+        string part = s.substr(0, i+1);
+        if(isPalindrome(part)){
+            validPartitions.push_back(part);
+            getAllParts(s.substr(i+1), ans, validPartitions);
+            validPartitions.pop_back();
         }
     }
-    
-    bool isPalindrome(string &s, int left, int right) {
-        while (left < right) {
-            if (s[left] != s[right]) return false;
-            left++;
-            right--;
-        }
-        return true;
-    }
-};
+}
+
+vector<vector<string>> partition(string s) {
+    vector<vector<string>> ans;
+    vector<string> validPartitions;
+
+    getAllParts(s, ans, validPartitions);
+    return ans;
+}
 
 int main(){
     
