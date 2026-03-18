@@ -2,7 +2,7 @@
 using namespace std;
 
 string mergeAlternately(string w1, string w2) {
-    int i = 0, j = 0, idx = 0;
+    int i = 0, j = 0;
     int n1 = w1.size(), n2 = w2.size();
 
     string ans;
