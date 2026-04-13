@@ -56,6 +56,10 @@ public:
     Demo(int x) {
         ptr = new int(x);
     }
+    //Destructor
+    ~Demo() {         
+        delete ptr;    // ❗ double delete happens in shallow copy
+    }
 };
 
 // Deep Copy
@@ -70,6 +74,10 @@ public:
     // deep copy constructor
     Demo(const Demo &obj) {
         ptr = new int(*obj.ptr);
+    }
+    //Destructor
+    ~Demo() {          
+        delete ptr;    // safe: each object has its own memory
     }
 };
 
