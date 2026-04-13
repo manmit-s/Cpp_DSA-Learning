@@ -17,6 +17,17 @@ class Teacher{
         }
 };
 
+class Account{
+    //Data hiding
+    private:
+        double balance;
+        string password;
+    
+    public:
+        string accountId;
+        string username;
+};
+
 int main(){
     Teacher t1; //Object of Teacher Class
     t1.name = "Manmit";
