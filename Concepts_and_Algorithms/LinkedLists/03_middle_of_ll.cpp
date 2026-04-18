@@ -33,14 +33,24 @@ class List{
                 tail = newNode;
             }
         }
+        //Simple Approach - using size of LL
+        // int middleNode(){
+        //     int n = nodeCount();
+        //     Node* temp = head;
+        //     for(int i = 0; i < n/2; i++){
+        //         temp = temp->next;
+        //     }
+        //     return temp->data;
+        // }
 
+        //Slow - Fast Pointer Approach - using 2 pointers
         int middleNode(){
-            int n = nodeCount();
-            Node* temp = head;
-            for(int i = 0; i < n/2; i++){
-                temp = temp->next;
+            Node *slow = head, *fast = head;
+            while(fast != NULL && fast->next != NULL){
+                slow = slow->next;
+                fast = fast->next->next;
             }
-            return temp->data;
+            return slow->data;
         }
 
         int nodeCount(){
