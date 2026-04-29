@@ -47,7 +47,7 @@ Each folder contains:
 While browsing the repository, you might notice that the `LeetCode/` directory contains relatively few files. However, I have actually solved **150+ LeetCode problems**! Earlier in my journey, I simply used an `LC` prefix in the filenames instead of organizing them into a dedicated directory. Because of this, many of those solutions are currently intermingled within other topic-based folders instead of residing in the main LeetCode directory.
 
 ### 🚧 Disclaimer:
-This is a learning repo. Some code may be messy, unoptimized, or under revision — that’s part of the process 🙂
+This is a learning repo. Some code may be messy, unoptimized, or under revision — that’s part of the process  🙂
 
 ---
 
