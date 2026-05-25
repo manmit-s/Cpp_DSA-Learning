@@ -12,5 +12,5 @@ public:
 
 int main(){
     Solution sol;
-    cout<<sol.numOfDigits(23123); //checking
+    cout<<sol.countCommas(23123); //checking
 }
